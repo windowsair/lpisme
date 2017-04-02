@@ -10,7 +10,7 @@
 
 ## 示例
 
-[http://www.a-b.ren/](http://www.a-b.ren/)
+[http://blog.a-b.ren/](http://blog.a-b.ren/)
 
 ### License
 
