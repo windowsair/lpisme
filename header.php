@@ -26,6 +26,8 @@
 <link rel="apple-touch-icon" href="<?php if($this->options->iosicon): $this->options->iosicon(); else: $this->options->themeUrl('images/favicon.png');endif; ?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/prism.css'); ?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/style.css'); ?>">
+<link rel="stylesheet" href="<?php $this->options->themeUrl('assets/photoswipe.css'); ?>">
+<link rel="stylesheet" href="<?php $this->options->themeUrl('assets/default-skin.css'); ?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
 <!--[if lt IE 9]>
 <script src="//cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>

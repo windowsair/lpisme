@@ -8,7 +8,7 @@
                     <div class="post-meta">
                         <span datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date('F jS , Y'); ?></span>
                     </div>
-                    <div class="post-content cf" itemprop="articleBody">
+                    <div class="post-content cf article-entry" data-pswp-uid="1" itemprop="articleBody">
                         <?php parseContent($this); ?>
 
                         <div class="post-copyright">
