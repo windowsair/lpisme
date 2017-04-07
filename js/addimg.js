@@ -7,7 +7,6 @@ if (document.getElementsByClassName('post-content cf')[0].getElementsByTagName('
  for (i = 0; i < img.length; i++) {
     div_array[i] = document.createElement("div");
     div_array[i].setAttribute("class","lightimg");
-div_array[i].setAttribute("data-no-instant","");
 	var url = img[i].getAttribute("src");
 	div_array[i].innerHTML = '<figure>' + '<img src = \"' + url + '\">';
     
