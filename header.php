@@ -28,7 +28,8 @@
 <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/style.css'); ?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/photoswipe.css'); ?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/default-skin.css'); ?>">
-<link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
+<script src="//cdn.bootcss.com/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
+<link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>" >
 <!--[if lt IE 9]>
 <script src="//cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
 <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>

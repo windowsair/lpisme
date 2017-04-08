@@ -147,6 +147,13 @@
     createPostDirectory(document.getElementsByClassName('post-content cf')[0],document.getElementById('directory'), true);
 };
 postDirectoryBuild();
+    var lists = document.getElementsByTagName("link");
+    for (i = 0; i < lists.length; i++) {
+    if (lists[i].getAttribute("href").indexOf("style.css") != -1) {
+    lists[i].setAttribute("href","<?php $this->options->themeUrl('passage.css'); ?>");
+    }
+
+}
 	</script>
     <script src="<?php $this->options->themeUrl('js/clipboard.min.js'); ?>" ></script>
 	<script src="<?php $this->options->themeUrl('js/prism-line-numbers.js'); ?>" ></script>
