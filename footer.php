@@ -33,7 +33,10 @@
 			&copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>
 		</div>
 	</div>
+	
+	
 	<?php $this->footer(); ?>
+	<script src="<?php $this->options->themeUrl('js/jquery.min.js'); ?>" data-no-instant></script>
 
 	<script src="<?php $this->options->themeUrl('js/functions.js'); ?>"></script>
 	<?php if(!empty($this->options->search_form) && in_array('Pjax', $this->options->search_form)): ?>
@@ -42,7 +45,8 @@
 	<script src="//cdn.bootcss.com/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
     <?php if($this->is('index')): ?>
 	<?php else: ?>
-	<script src="<?php $this->options->themeUrl('js/prism.js'); ?>" data-no-instant></script>
+	
+	<script src="<?php $this->options->themeUrl('js/prism.js'); ?>" ></script>
 	<script src="<?php $this->options->themeUrl('js/prism-toolbar.js'); ?>" ></script>    
     <script src="<?php $this->options->themeUrl('js/prism-copy-to-clipboard.js'); ?>" ></script>
 	<div id="directory-content" class="directory-content"><div id="directory"></div></div>
