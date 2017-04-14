@@ -44,6 +44,12 @@
 	<script src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js" data-no-instant></script>
 	<script src="//cdn.bootcss.com/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
     <?php if($this->is('index')): ?>
+    <script> var lists = document.getElementsByTagName("link");
+    for (var i = 0; i < lists.length; i++) {
+    if (lists[i].getAttribute("href").indexOf("passage.css") != -1) {
+    lists[i].setAttribute("href","<?php $this->options->themeUrl('style.css'); ?>");
+}
+    </script>
 	<?php else: ?>
 	
 	<script src="<?php $this->options->themeUrl('js/prism.js'); ?>" ></script>
@@ -147,13 +153,6 @@
     createPostDirectory(document.getElementsByClassName('post-content cf')[0],document.getElementById('directory'), true);
 };
 postDirectoryBuild();
-    var lists = document.getElementsByTagName("link");
-    for (i = 0; i < lists.length; i++) {
-    if (lists[i].getAttribute("href").indexOf("style.css") != -1) {
-    lists[i].setAttribute("href","<?php $this->options->themeUrl('passage.css'); ?>");
-    }
-
-}
 	</script>
     <script src="<?php $this->options->themeUrl('js/clipboard.min.js'); ?>" ></script>
 	<script src="<?php $this->options->themeUrl('js/prism-line-numbers.js'); ?>" ></script>
