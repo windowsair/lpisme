@@ -77,10 +77,8 @@ table tr:nth-child(2n){background-color:#f8f8f8;}
 .cf:after,.cf:before{display:table;content:'';}
 .cf:after{clear:both;}
 .cf{zoom:1;}
-.header{position:fixed;z-index:888;top:0;width:100%;height:60px;border-bottom:1px solid #e1e2e3;background-color:#fff;box-shadow:0 0 3px rgba(0,0,0,.1);}
 .logo a{font-family:'Droid Serif',Georgia,'Times New Roman',STHeiti,serif;font-size:22px;line-height:60px;display:block;overflow:hidden;height:60px;padding:0 30px 0 35px;letter-spacing:.2em;color:#5b6064;border-right:1px solid #ddd;}
 .logo a:hover{color:#fff;background-color:#5b6064;}
-.header .slogan{line-height:60px;position:relative;display:inline-block;overflow:hidden;padding-left:20px;letter-spacing:.2em;}
 .buttons{line-height:0;float:right;padding:0 2% 0 0;}
 .button-hover,.button:hover,.button:focus{opacity:.8;}
 .button:focus{outline:0;}
@@ -88,7 +86,7 @@ table tr:nth-child(2n){background-color:#f8f8f8;}
 .nav a{font-size:15px;line-height:60px;display:inline-block;height:60px;padding:0 20px;cursor:pointer;color:#fff;}
 .menu-show .nav{height:60px;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);background:#f77b83;}
 #menu-toggle .icon-menu{font-size:24px;line-height:60px;padding:0 8px;}
-.menu-show .header .buttons .icon-menu{-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg);}
+.menu-show  .buttons .icon-menu{-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg);}
 
 /* ==========================================================================
    #Index
@@ -371,8 +369,8 @@ textarea.form-control{width:100%;height:10rem;resize:none;}
 /* header */
 .header {
   line-height: 68px;
-  position: fixed;
-  z-index: 10;
+  position: absolute;
+  z-index: -1;
   top: 0;
   display: block;
   width: 100%;
