@@ -2,14 +2,20 @@
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 function themeConfig($form) {
+	//logo设置
 	$slogan = new Typecho_Widget_Helper_Form_Element_Text('slogan', NULL, NULL, _t('logo旁边的标语'), _t('在这里输入标语'));
 	$form->addInput($slogan);
+    $logoUrl = new Typecho_Widget_Helper_Form_Element_Text('logoUrl', NULL, NULL, _t('页头logo地址'), _t('一般为http://www.yourblog.com/image.png,支持 https:// 或 //,留空则使用站点名称'));
+    $form->addInput($logoUrl->addRule('xssCheck', _t('请不要在图片链接中使用特殊字符')));
 
 	//图标设置
 	$favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', NULL, NULL, _t('Favicon'), _t('在这里输入图标链接,带http:// ,不填则使用主题自带的Favicon'));
 	$form->addInput($favicon);
 	$iosicon = new Typecho_Widget_Helper_Form_Element_Text('iosicon', NULL, NULL, _t('Apple Touch Icon'), _t('在这里输入图标链接,带http:// ,不填则使用主题自带的Apple Touch Icon'));
 	$form->addInput($iosicon);
+    //搜索页
+    $searchPage = new Typecho_Widget_Helper_Form_Element_Text('searchPage', NULL, NULL, _t('搜索页地址'), _t('输入你的 Template Page of Search 的页面地址,记得带上 http:// 或 https://'));
+    $form->addInput($searchPage->addRule('xssCheck', _t('请不要在链接中使用特殊字符')));
 
 	//文章列表
 	$listCol = new Typecho_Widget_Helper_Form_Element_Select('listCol', array('one' => _t('单列'),'two' => _t('双列'),), 'one', _t('首页文章列表样式'), _t('设置文章列表显示列数'));

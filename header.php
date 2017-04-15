@@ -41,30 +41,47 @@
         当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/" target="_blank">升级你的浏览器</a>。
         </div>
         <![endif]-->
-        <div class="header">
-            <div class="logo left">
-                <a href="<?php $this->options->siteUrl(); ?>">
-                    <?php $this->options->title() ?>
-                </a>
-            </div>
-            <div class="slogan">
-                <span class="description"><?php $this->options->slogan(); ?></span>
-            </div>
-            <div class="buttons">
-                <div id="search-toggle"><i class="icon icon-search"></i></div>
-                <div id="menu-toggle"><i class="icon icon-menu"></i></div>
-            </div>
+        <header id="header" class="header bg-white">
+    <div class="navbar-container">
+        <a href="<?php $this->options->siteUrl(); ?>" class="navbar-logo">
+            <?php if($this->options->logoUrl): ?>
+            <img src="<?php $this->options->logoUrl();?>" alt="<?php $this->options->title() ?>" />
+            <?php else : ?>
+            <?php $this->options->title() ?>
+            <?php endif; ?>
+        </a>
+        <div class="navbar-menu">
+            <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
+            <?php while($pages->next()): ?>
+
+            <a<?php if($this->is('page', $pages->slug)): ?> class="current"<?php endif; ?> href="<?php $pages->permalink(); ?>"><?php $pages->title(); ?></a>
+            <?php endwhile; ?>
+
         </div>
-        <form id="search" method="post" action="/" role="search">
-            <input type="text" class="input" name="s" required="true" placeholder="...Search" dir="rtl">
-        </form>
-        <nav class="nav">
-            <div class="nav-wrapper right">
+        <?php if($this->options->searchPage): ?>
+        <a href="<?php $this->options->searchPage(); ?>" class="navbar-search">
+            <span class="icon-search"></span>
+        </a>
+        <?php else: ?>
+        <div class="navbar-search" onclick="">
+            <span class="icon-search"></span>
+            <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
+                <span class="search-box">
+                    <input type="text" id="input" class="input" name="s" required="true" placeholder="Search..." maxlength="30" autocomplete="off">
+                </span>
+            </form>
+        </div>
+        <?php endif;?>
+        <div class="navbar-mobile-menu" onclick="">
+            <span class="icon-menu cross"><span class="middle"></span></span>
+            <ul>
                 <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
                 <?php while($pages->next()): ?>
 
-                <a <?php if($this->is('page', $pages->slug)): ?> class="current"<?php endif; ?> href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
+                <li><a<?php if($this->is('page', $pages->slug)): ?> class="current"<?php endif; ?> href="<?php $pages->permalink(); ?>"><?php $pages->title(); ?></a></li>
                 <?php endwhile; ?>
 
-            </div>
-        </nav>
+            </ul>
+        </div>
+    </div>
+</header>
