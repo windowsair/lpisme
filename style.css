@@ -91,7 +91,7 @@ table tr:nth-child(2n){background-color:#f8f8f8;}
 /* ==========================================================================
    #Index
    ========================================================================== */
-.index-wrapper{position:relative;width:100%;margin:0 auto;}
+.index-wrapper{position:relative;width:100%;margin:0 auto;z-index: 1;}
 .index-posts{position:relative;z-index:10;width:940px;height:auto;margin:0px auto;}
 .index-posts-onecol{width:780px!important;}
 .index-post{float:left;clear:left;width:450px;height:auto;margin:0px 10px 20px 10px;-webkit-border-radius:3px;border-radius:3px;background:#fff;-webkit-box-shadow:1px 2px 3px #ddd;box-shadow:1px 2px 3px #ddd;}
