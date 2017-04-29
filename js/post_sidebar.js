@@ -3,32 +3,30 @@ var FormerDom_num,LatterDom_num,FormerDom,LatterDom;
 window.addEventListener('scroll', winScroll);
 
 function winScroll(e) {
-	var top;
+	var top = new Array();
+	var Min = 0;
 	for (var i = 0; i < fixedDom.length; i++) {
-		top = getElementViewTop(fixedDom[i]);
-	if (top > -127 && top < -50){
-		
+		top[i] = getElementViewTop(fixedDom[i]);
+		if(i != 0 && top[i] < top[i-1])Min = i ;
+	}
+
 		if(FormerDom_num != undefined){
 			FormerDom_num = 'directory' + FormerDom_num.toString();
 			FormerDom = document.getElementById(FormerDom_num);
 			FormerDom.classList.remove('active');
 		}
-		LatterDom_num = 'directory' + i.toString();
+		LatterDom_num = 'directory' + Min.toString();
 		LatterDom = document.getElementById(LatterDom_num);
 		LatterDom.classList.add('active');
-		FormerDom_num = i;
-}
-	}
+		FormerDom_num = Min;
 	
-}
-function changeFormerDom(i){
-
+	
 }
 
 function getElementViewTop(element) {　　　　
 	var actualTop = element.offsetTop,
 		elementScrollTop = Math.max(document.documentElement.scrollTop, document.body.scrollTop);　　　　
-	return actualTop - elementScrollTop;　　
+	return Math.abs(actualTop - elementScrollTop);　　
 }
 
 function getElementsByTagNames(list, obj) {
