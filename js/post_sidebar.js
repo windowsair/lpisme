@@ -7,7 +7,7 @@ function winScroll(e) {
 	var Min = 0;
 	for (var i = 0; i < fixedDom.length; i++) {
 		top[i] = getElementViewTop(fixedDom[i]);
-		if(i != 0 && top[i] < top[i-1])Min = i ;
+		if(i != 0 && top[i] < 0 && top[i] > top[i-1])Min = i ; //查找当前在下方且离顶部最近的元素
 	}
 
 		if(FormerDom_num != undefined){
@@ -15,9 +15,9 @@ function winScroll(e) {
 			FormerDom = document.getElementById(FormerDom_num);
 			FormerDom.classList.remove('active');
 		}
-		LatterDom_num = 'directory' + Min.toString();
-		LatterDom = document.getElementById(LatterDom_num);
-		LatterDom.classList.add('active');
+            LatterDom_num = 'directory' + Min.toString();
+            LatterDom = document.getElementById(LatterDom_num);
+            LatterDom.classList.add('active');
 		FormerDom_num = Min;
 	
 	
@@ -26,7 +26,7 @@ function winScroll(e) {
 function getElementViewTop(element) {　　　　
 	var actualTop = element.offsetTop,
 		elementScrollTop = Math.max(document.documentElement.scrollTop, document.body.scrollTop);　　　　
-	return Math.abs(actualTop - elementScrollTop);　　
+	return actualTop - elementScrollTop;　　// >0则元素在上方
 }
 
 function getElementsByTagNames(list, obj) {
