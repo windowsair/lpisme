@@ -38,7 +38,6 @@
 	<?php $this->footer(); ?>
 	
 
-	<script src="<?php $this->options->themeUrl('js/functions.js'); ?>"></script>
 	<?php if(!empty($this->options->search_form) && in_array('Pjax', $this->options->search_form)): ?>
 
 	<script src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js" data-no-instant></script>
@@ -163,12 +162,12 @@ function winScroll(e) {
 		if(FormerDom_num != undefined){
 			FormerDom_num = 'directory' + FormerDom_num.toString();
 			FormerDom = document.getElementById(FormerDom_num);
-			FormerDom.classList.remove('active');
+			if(FormerDom != undefined )FormerDom.classList.remove('active');
 		}
             LatterDom_num = 'directory' + Min.toString();
             LatterDom = document.getElementById(LatterDom_num);
-            LatterDom.classList.add('active');
-		FormerDom_num = Min;
+            if(LatterDom != undefined )LatterDom.classList.add('active');
+		    FormerDom_num = Min;
 	
 	
 }
