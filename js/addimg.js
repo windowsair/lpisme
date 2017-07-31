@@ -8,7 +8,7 @@ if (document.getElementsByClassName('post-content cf')[0].getElementsByTagName('
     div_array[i] = document.createElement("div");
     div_array[i].setAttribute("class","lightimg");
 	var url = img[i].getAttribute("src");
-	div_array[i].innerHTML = '<figure>' + '<img src = \"' + url + '\">';
+	div_array[i].innerHTML = '<figure>' + '<a href = \"' + url + '\" title=\"\" data-no-instant=\"\"' +  '>' +'<img src = \"' + url + '\">';
     
 	document.getElementsByClassName('post-content cf')[0].replaceChild(div_array[i], img[i].parentElement);
 	
@@ -18,20 +18,20 @@ if (document.getElementsByClassName('post-content cf')[0].getElementsByTagName('
   'use strict';
 
   // Caption
+  var lightimg = document.getElementsByClassName('lightimg');
+  var son = new Array();
+  var father = new Array();
+  var before = new Array();
+  for (var i = 0; i < lightimg.length && lightimg.length > 0 ; i++) {
+    lightimg[i].firstElementChild.setAttribute("class","article-gallery-img");
+    lightimg[i].firstElementChild.setAttribute("data-no-instant","");
 
-  $('.article-entry').each(function(i){
-    $(this).find('img').each(function(){
-      if ($(this).closest('figure').hasClass('article-gallery-img')) {
-        return;
-      }
-      var alt = this.alt;
-      $(this)
-        .wrap('<figure class="article-gallery-img" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" data-no-instant></figure>')
-        .wrap('<a href="' + this.src + '" title="' + alt + '" data-no-instant></a>');
-      $(this).after('<figcaption class="caption">' + (alt || '') + '</figcaption>');
-    });
-  });
-
+    father[i] = document.createElement("figure");  //包裹firgure元素
+    son[i] = lightimg[i].firstElementChild;
+    lightimg[i].appendChild(father[i]); 
+    father[i].appendChild(son[i]);
+  }
+  
   // PhotoSwipe
 
   var pswpElement = document.querySelectorAll('.pswp')[0];
