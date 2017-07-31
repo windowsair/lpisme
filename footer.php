@@ -36,7 +36,7 @@
 	
 	
 	<?php $this->footer(); ?>
-	<script src="<?php $this->options->themeUrl('js/jquery.min.js'); ?>" data-no-instant></script>
+	
 
 	<script src="<?php $this->options->themeUrl('js/functions.js'); ?>"></script>
 	<?php if(!empty($this->options->search_form) && in_array('Pjax', $this->options->search_form)): ?>
