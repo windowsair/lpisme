@@ -382,11 +382,10 @@ textarea.form-control{width:100%;height:10rem;resize:none;}
 
 /* header */
 .header {
-  line-height: 68px;
+
   position: fixed;
   z-index: 2;
   top: 0;
-  display: block;
   width: 100%;
   height: 55px;
   padding: 0;
@@ -415,25 +414,22 @@ textarea.form-control{width:100%;height:10rem;resize:none;}
 }
 
 .navbar-container {
-  position: relative;
+  position: absolute;
   width: 1040px;
   max-width: 100%;
   height: 55px;
+  display: flex;
+  flex-direction: row;
   background: linear-gradient(-120deg, rgba(245,33,33,0) 87%, rgba(255,255,255,0.08) 15%),linear-gradient(-110deg, rgba(27,0,255,0) 85%, rgba(255,255,255,0.08) 15%),linear-gradient(-103deg, rgba(255,33,33,0) 84%, rgba(255,255,255,0.08) 15%),radial-gradient(circle, rgba(0,135,201,0) 0%, rgba(0,135,201,0) 100%);
 }
 
 .navbar-logo {
   font-size: 22px;
-  line-height: 22px;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  display: block;
-  width: auto;
+
   max-width: 50%;
   height: 22px;
-  margin-top: -10px;
-  margin-left: 25px;
+  margin-top: 8px;
+  margin-left: 5%;
   text-decoration: none;
   color: #fff;
 }
@@ -446,20 +442,16 @@ textarea.form-control{width:100%;height:10rem;resize:none;}
 
 .navbar-menu {
   font-size: 22px;
-  line-height: 22px;
-  position: absolute;
-  top: 25px;
-  right : 20%;
-  display: block;
+
   width: auto;
   max-width: 50%;
-  height: 22px;
-  margin-top: -10px;
-  text-decoration: none
+  margin-top: 8px;
+  text-decoration: none;
+  margin-left: 50%;
 }
 
 .navbar-menu a {
-  font-size: 14px;
+  font-size: 16px;
   color: #fff
 }
 
@@ -564,11 +556,10 @@ textarea.form-control{width:100%;height:10rem;resize:none;}
 }
 
 .navbar-search {
-  line-height: 70px;
-  display: inline-block;
-  width: 20px;
-  padding: 0 40px 0 0;
-  cursor: pointer
+
+  cursor: pointer;
+  margin-top: 17px;
+  margin-left: 5%;
 }
 
 .navbar-search:active>form,.navbar-search:focus>form,.navbar-search:hover>form {
@@ -629,9 +620,10 @@ textarea.form-control{width:100%;height:10rem;resize:none;}
   -webkit-appearance: none
 }
 .icon-search {
-  position: relative;
+
   z-index: 1;
   display: inline-block;
+  margin-left: 10px;
   width: 13px;
   height: 13px;
   -webkit-transform: rotate(-45deg);
@@ -640,9 +632,9 @@ textarea.form-control{width:100%;height:10rem;resize:none;}
   color: #fff;
   border: solid 2px currentColor;
   border-radius: 50%;
-  position:absolute;
-  top: 20px;
-  right : 15%;
+
+  top: 39px;
+
 }
 
 .icon-search:before {
@@ -800,7 +792,9 @@ textarea.form-control{width:100%;height:10rem;resize:none;}
 	}
 
 	.navbar-search {
-		padding: 0 35px 0 0
+		padding: 0 35px 0 0;
+		position: absolute;
+		right: 10%;
 	}
 
 	.navbar-search form {
