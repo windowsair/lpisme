@@ -62,6 +62,9 @@
         <a href="<?php $this->options->searchPage(); ?>" class="navbar-search">
             <span class="icon-search"></span>
         </a>
+            <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
+                    <input type="text" id="input" class="input" name="s" required="true" placeholder="Search..." maxlength="30" autocomplete="off">
+            </form> 
         <?php else: ?>
         <div class="navbar-search" onclick="">
             <span class="icon-search"></span>
@@ -72,6 +75,7 @@
             </form>
         </div>
         <?php endif;?>
+        
         <div class="navbar-mobile-menu" onclick="">
             <span class="icon-menu cross"><span class="middle"></span></span>
             <ul>

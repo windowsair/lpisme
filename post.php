@@ -19,5 +19,7 @@
                 </article>
                 <?php $this->need('comments.php'); ?>
             </div>
+            	<div id="directory-content" class="directory-content"><div id="directory"></div>
+                </div>
         </div>
 <?php $this->need('footer.php'); ?>
