@@ -71,7 +71,7 @@ table th{font-weight:bold;}
 table th,table td{padding:6px 13px;border:1px solid #ddd;}
 table tr{border-top:1px solid #ccc;background-color:#fff;}
 table tr:nth-child(2n){background-color:#f8f8f8;}
-
+img:hover{box-shadow: 0 0 15px rgba(170,170,170,.87);}
 /* ==========================================================================
    #Header
    ========================================================================== */
