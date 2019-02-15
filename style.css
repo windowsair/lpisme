@@ -127,8 +127,8 @@ a.index-post-cover:hover::before{visibility:visible;opacity:.8;-ms-filter:'alpha
 /* ==========================================================================
    #Container & Post
    ========================================================================== */
-.container{min-height:200px;margin-top:60px;display: flex;flex-direction: row;padding:3% 3% 0%;-webkit-animation:fade-in .5s;animation:fade-in;animation-duration:.5s;}
-.wrapper{width: 80%;display: flex;margin-bottom: 3%;padding:1% 4% 2%;max-width: 1000px;flex-direction: column;-webkit-border-radius:3px;border-radius:3px;background-color:#fff;-webkit-box-shadow:1px 2px 3px #ddd;box-shadow:1px 2px 3px #ddd;}
+.container{min-height:200px;margin-top:60px;display: flex;flex-direction: row;padding: 3% 2% 0% 0%;-webkit-animation:fade-in .5s;animation:fade-in;animation-duration:.5s;}
+.wrapper{margin-left: 270px;padding: 1% 4% 2%;-webkit-border-radius:3px;border-radius:3px;background-color:#fff;-webkit-box-shadow:1px 2px 3px #ddd;box-shadow:1px 2px 3px #ddd;}
 .archive-title{font-size:.9rem;font-weight:400;padding:0 0 3% 0;text-align:center;color:#222;}
 .archive-search-nothing{font-size:.9rem;font-weight:400;position:absolute;top:0;right:0;bottom:0;left:0;margin:auto;text-align:center;color:#999;}
 .post-title{font-size:1.4rem;display:block;margin:3% 0 0;text-align:center;}
@@ -221,10 +221,10 @@ textarea.form-control{width:100%;height:10rem;resize:none;}
 /* ==========================================================================
    #footer
    ========================================================================== */
-#footer{font-size:13px;line-height:2.5em;clear:both;padding:20px 0;text-align:center;color:#929292;background:#fff;text-shadow:none;z-index: 1;position: relative;}
+#footer{font-size:13px;line-height:2.5em;clear:both;padding:20px 0;text-align:center;color:#929292;background:#fff;text-shadow:none;z-index: 9999;position: relative;}
 #footer a{color:#929292;}
 #footer a:hover{color:#f77b83;}
-#footer .social-wrapper{padding-top:20px;z-index: 1;}
+#footer .social-wrapper{padding-top:20px;z-index: 9999;}
 #footer a:hover{color:#f08f00;background:rgba(255,152,0,.1);}
 #footer a.social{font-size:18px;position:relative;display:inline-block;margin:0px 3px;text-align:center;}
 #footer a.social:hover{color:#ff9800;background:transparent;}
@@ -234,7 +234,7 @@ textarea.form-control{width:100%;height:10rem;resize:none;}
 #footer a.social.weibo:hover{color:#f82a2a;}
 #footer a.social.google-plus:hover{color:#55b559;}
 #footer .codename{color:#ff9800;}
-@media(max-width:699px){
+@media(max-width:730px){
    .nav{width:auto;}
    .nav a{display:block;}
    .menu-show .nav{height:auto;}
@@ -279,12 +279,8 @@ textarea.form-control{width:100%;height:10rem;resize:none;}
    #sidebar
    ========================================================================== */
    .directory-content {
-  z-index: 0;
-  display: flex;
-  margin-left: 1%;
-  width: auto;
-  height: 100%;
-  background: #eee;
+  width: 270px;
+  margin-right: auto;
 }
 
 .directory-content.initial {
@@ -311,10 +307,12 @@ textarea.form-control{width:100%;height:10rem;resize:none;}
 
 #directory {
   position: fixed;
-  z-index: 0;
-  height:100%;
-  font-size: 0.8rem;
+  left: 0;
+  top: 61px;
+  bottom: 0;
+  overflow-y: scroll;
   background: #eee;
+  width: 260px;
 }
 
 #directory li,#directory ul {
@@ -324,9 +322,7 @@ textarea.form-control{width:100%;height:10rem;resize:none;}
 }
 
 #directory>ul {
-  position: relative;
-  z-index: 0;
-  border-left: 1px solid #ddd
+  padding: 12px 20px 60px 23px;
 }
 
 #directory>ul>li::before {
@@ -344,13 +340,11 @@ textarea.form-control{width:100%;height:10rem;resize:none;}
 #directory ul li a {
   display: inline;
   margin-left: 5px;
-  white-space: nowrap
 }
 
 #directory ul li ul li a {
   margin-left: 20px;
-  white-space: nowrap;
-  color: #5f5f5f
+  color: #5f5f5f;
 }
 
 #directory ul li ul li ul li a {
@@ -370,15 +364,13 @@ textarea.form-control{width:100%;height:10rem;resize:none;}
   color: #563d7c
 }
 
-@media(max-width:1100px) {
+@media(max-width:730px) {
   .directory-content {
     display: none
   }
   .wrapper{
     width:100%
-  }
-  .container{
-    padding: 0
+    margin:0
   }
 }
 
@@ -792,23 +784,23 @@ textarea.form-control{width:100%;height:10rem;resize:none;}
 }
 
 @media(max-width:650px) {
-	.navbar-menu {
-		display: none
-	}
+  .navbar-menu {
+    display: none
+  }
 
-	.navbar-search {
-		padding: 0 35px 0 0;
-		position: absolute;
-		right: 10%;
-	}
+  .navbar-search {
+    padding: 0 35px 0 0;
+    position: absolute;
+    right: 10%;
+  }
 
-	.navbar-search form {
-		width: 180px;
-		margin-right: 55px
-	}
+  .navbar-search form {
+    width: 180px;
+    margin-right: 55px
+  }
 
-	.navbar-mobile-menu {
-		display: inline-block
+  .navbar-mobile-menu {
+    display: inline-block
   }
   .icon-search{
     right: 18%;
