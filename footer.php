@@ -52,7 +52,8 @@
 
 
     var aLi = document.getElementsByTagName("pre");
-    for (let i = 0; i < aLi.length; i++) {
+	var i  = 0;
+    for (i = 0; i < aLi.length; i++) {
         aLi[i].className += ' line-numbers';
     }
 var postDirectoryBuild = function () {
