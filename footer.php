@@ -49,12 +49,12 @@
 	<script src="<?php $this->options->themeUrl('js/prism-toolbar.js'); ?>" ></script>    
     <script src="<?php $this->options->themeUrl('js/prism-copy-to-clipboard.js'); ?>" ></script>
 	<script>
-	var aLi = document.getElementsByTagName("pre");
 
-var i = 0;
-for (i = 0; i < aLi.length; i++) {
-    aLi[i].className += ' line-numbers';
-}
+
+    var aLi = document.getElementsByTagName("pre");
+    for (let i = 0; i < aLi.length; i++) {
+        aLi[i].className += ' line-numbers';
+    }
 var postDirectoryBuild = function () {
     var postChildren = function children(childNodes, reg) {
         var result = [],
@@ -148,16 +148,16 @@ var FormerDom_num, LatterDom_num, FormerDom, LatterDom;
 if (fixedDom.length > 0) {
     postDirectoryBuild();
 } else {
-    let a = document.getElementsByClassName('wrapper main');
-    a[0].style.maxWidth = "none";
-    a[0].style.width = "100%"
+    document.getElementById("directory-content").style.display =  "none";
+	document.getElementsByClassName("wrapper main")[0].classList.add("hiddenDirectory");
+    
 }
 window.addEventListener('scroll', winScroll);
 
 function winScroll(e) {
     var top = new Array();
     var Min = 0;
-    for (var i = 0; i < fixedDom.length; i++) {
+    for (let i = 0; i < fixedDom.length; i++) {
         top[i] = getElementViewTop(fixedDom[i]);
         if (i != 0 && top[i] < 0 && top[i] > top[i - 1]) Min = i; //查找当前在下方且离顶部最近的元素
     }
