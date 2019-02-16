@@ -36,7 +36,7 @@ html{overflow-x:hidden;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
                                    transparent)
 }
 button,input,select,textarea{font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;}
-body{font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;font-size:14px;line-height:1.6;margin:0 auto;color:#333;background-color:#eee;}
+body{font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;font-size: 14px;line-height:1.6;margin:0 auto;color:#333;background-color:#eee;}
 body>*:first-child{margin-top:0!important;}
 body>*:last-child{margin-bottom:0!important;}
 p,blockquote,ul,ol,dl,table,pre{margin:14px 0;}
@@ -144,8 +144,8 @@ a.index-post-cover:hover::before{visibility:visible;opacity:.8;-ms-filter:'alpha
 .post-content pre{font-family:'inconsolata','Consolas',monospace,sans-serif;display:block;overflow:auto;box-sizing:border-box;width:100%;word-wrap:break-word;}
 .post-content pre code{font-size:1em;margin:0;padding:0px 0px;white-space:inherit;color:#414141;border:0;background:0;}
 .post-content pre figure{margin:0;}
-.post-content p{line-height:24px;word-wrap:break-word;word-break:break-word;}
-.post-content code{font-family:'inconsolata','Consolas',monospace,sans-serif;font-size:.8em;margin:0 2px;padding:1px 5px;white-space:inherit;color:#c7254e;border:none;border-radius:2px;background-color:#f9f2f4;}
+.post-content p{line-height:24px;word-wrap:break-word;word-break:break-word;font-size: 1.1em;}
+.post-content code{font-family:'inconsolata','Consolas',monospace,sans-serif;font-size: 0.9em;margin:0 2px;padding:1px 5px;white-space:inherit;color:#c7254e;border-radius:2px;background-color:#f9f2f4;}
 .post-content img{position:relative;display:block;overflow:hidden;max-width:100%;height:auto;margin:0 auto;-webkit-transition:all .24s ease;transition:all .24s ease;}
 .post-content .word{text-align:center;}
 .post-content .text{display:block;height:34px;margin:15px 0;margin:0 auto 15px;padding:6px 12px;border:1px solid #ccc;border-radius:4px;background-color:#fff;}
