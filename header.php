@@ -29,6 +29,7 @@
 <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/photoswipe.css'); ?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/default-skin.css'); ?>">
 <script src="//cdn.bootcss.com/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>" >
 <!--[if lt IE 9]>
 <script src="//cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>

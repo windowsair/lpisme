@@ -38,6 +38,8 @@
 	<?php $this->footer(); ?>
 	
 
+
+
 	<?php if(!empty($this->options->search_form) && in_array('Pjax', $this->options->search_form)): ?>
 
 	<script src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js" data-no-instant></script>
@@ -237,6 +239,18 @@ function getElementsByTagNames(list, obj) {
 	<script src="<?php $this->options->themeUrl('js/prism.js'); ?>" ></script>
  
 	<?php endif; ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/contrib/auto-render.min.js"></script>
 
+        <script>
+    renderMathInElement(document.body,
+   {
+              delimiters: [
+                  {left: "$$", right: "$$", display: true},
+                  {left: "$", right: "$", display: false}
+              ]
+          }
+  );
+ </script>
 	</body>
 </html>
