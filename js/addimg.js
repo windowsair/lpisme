@@ -12,7 +12,8 @@
       + `<a href="${img_url}" title="" data-no-instant="">` +
       `<img src="${img_url}"></a></figure></figure>`
 
-    img[i].parentElement.parentElement.replaceChild(divArray[i], img[i].parentElement);
+    img[i].parentElement.replaceChild(divArray[i], img[i]);
+    
   }
 
 
