@@ -36,17 +36,17 @@ html{overflow-x:hidden;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
                                    transparent)
 }
 button,input,select,textarea{font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;}
-body{font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;font-size: 14px;line-height:1.6;margin:0 auto;color:#333;background-color:#eee;}
+body{font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;font-size: 13px;line-height:1.6;margin:0 auto;color:#333;background-color:#eee;width: 100%;overflow-x: hidden;}
 body>*:first-child{margin-top:0!important;}
 body>*:last-child{margin-bottom:0!important;}
 p,blockquote,ul,ol,dl,table,pre{margin:14px 0;}
 h1,h2,h3,h4,h5,h6{font-weight:normal;-webkit-font-smoothing:antialiased;}
 h1 tt,h1 code,h2 tt,h2 code,h3 tt,h3 code,h4 tt,h4 code,h5 tt,h5 code,h6 tt,h6 code{font-size:inherit;}
-h1{font-size: 2em;color:#000;}
-h2{font-size: 1.8em;color:#111;}
-h3{font-size: 1.6em;color:#222;}
-h4{font-size:1.4em;color:#333;}
-h5{font-size:1.2em;color:#333;}
+h1{font-size: 1.75em;color:#000;}
+h2{font-size: 1.5em;color:#111;}
+h3{font-size: 1.25em;color:#222;}
+h4{font-size:1.2em;color:#333;}
+h5{font-size:1.0em;color:#333;}
 h6{font-size:1.0em;color:#333;}
 body>h2:first-child,body>h1:first-child,body>h1:first-child+h2,body>h3:first-child,body>h4:first-child,body>h5:first-child,body>h6:first-child{margin-top:0;padding-top:0;}
 a:first-child h1,a:first-child h2,a:first-child h3,a:first-child h4,a:first-child h5,a:first-child h6{margin-top:0;padding-top:0;}
@@ -152,7 +152,7 @@ a.index-post-cover:hover::before{visibility:visible;opacity:.8;-ms-filter:'alpha
 .post-content .more{margin:0 0 1.5rem;}
 .post-content .more a{font-weight:700;margin:0;padding:0;color:#666;background:0;}
 .post-content .more a:hover{color:#f77b83;background:0;}
-.post-content ul li {font-size: 1.1em;}
+.post-content ul li {font-size: 1.0em;}
 .post-content ol li{font-size: 1.1em;}
 .post-meta{font-size:.75em;display:block;margin:10px 0 10px;text-align:center;color:#999;}
 .post-copyright{font-size:1em;display:block;margin:0 0 10px;color:#999;}
