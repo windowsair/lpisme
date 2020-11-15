@@ -28,8 +28,15 @@
 		</div>
 		<div>
 			Theme is <span class="codename">Lpisme</span> by <a href="https://www.linpx.com" target="_blank">Chakhsu</a> / Powered by <a href="http://www.typecho.org" target="_blank">Typecho</a>
-		</div>
-		<div>
+        </div>
+        
+        <?php if ($this->options->icp_msg): ?>
+            <div>
+                <a href="http://www.miitbeian.gov.cn/" target="_blank"><?php $this->options->icp_msg(); ?></a>
+            </div>
+        <?php endif; ?>
+        
+        <div>
 			&copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>
 		</div>
 	</div>

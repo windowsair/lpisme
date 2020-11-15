@@ -79,7 +79,7 @@ $this->need('header.php');
     </div>
 
 </div>                
-<div class="index-posts <?php if ($this->options->listCol == "one") echo "index-posts-onecol"; ?> cf">
+<div class="index-posts <?php if ($this->options->listCol == "one") echo "index-posts-onecol";  else echo "index-posts-twocol"?> cf">
                     <?php while($this->next()): ?>
 
                     <article class="index-post <?php if ($this->options->listCol == "one") echo "index-post-onecol"; ?> cf" itemscope itemtype="http://schema.org/BlogPosting">

@@ -44,13 +44,22 @@ function themeConfig($form) {
 
 	//默认缩略图
 	$default = new Typecho_Widget_Helper_Form_Element_Text('default_thumb', NULL, '', _t('默认缩略图'),_t('文章没有图片时显示的默认缩略图，为空时表示不显示，如http://www.yourblog.com/image.png'));
-	$form->addInput($default);
+    $form->addInput($default);
+    // 缩略图总数
+    $thumb_total = new Typecho_Widget_Helper_Form_Element_Text('thumb_total', NULL, '1', _t('总共的图片张数'),_t('大于1张时,会在图片后面添加序号,从1开始'));
+    $form->addInput($thumb_total);
+    
 	//默认宽度
 	$width = new Typecho_Widget_Helper_Form_Element_Text('thumb_width', NULL, '600', _t('缩略图默认宽度'));
 	$form->addInput($width);
 	//默认高度
 	$height = new Typecho_Widget_Helper_Form_Element_Text('thumb_height', NULL, '100%', _t('缩略图默认高度'));
-	$form->addInput($height);
+    $form->addInput($height);
+    
+    // 备案号    
+    $icp_msg = new Typecho_Widget_Helper_Form_Element_Text('icp_msg', NULL, NULL, _t('备案号'), _t('如粤ICP备18026XXX号'));
+	$form->addInput($icp_msg);
+
 }
 
 function showThumb($obj,$size=null,$link=false,$pattern='<div class="post-thumb"><a class="thumb" href="{permalink}" title="{title}" style="background-image:url({thumb})"></a></div>'){
@@ -100,7 +109,16 @@ function showThumb($obj,$size=null,$link=false,$pattern='<div class="post-thumb"
     if(empty($thumb) && empty($options->default_thumb)){
         return '';
     }else{
-        $thumb = empty($thumb) ? $options->default_thumb : $thumb;
+        $thumb_total = $options->thumb_total;
+        if(empty($thumb)){
+            $thumb = $options->default_thumb;
+            if($thumb_total > 1){
+                $thumb_index = rand(1, $thumb_total);
+                $txt2 = strrev($thumb);
+                $arr = explode(".", $txt2, 2);
+                $thumb = strrev($arr[1]). strval($thumb_index). "." .strrev($arr[0]);
+            }
+        }
     }
     if($link){
         return $thumb;
